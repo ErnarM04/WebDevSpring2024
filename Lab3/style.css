@@ -1,0 +1,113 @@
+body{
+    margin: 0 0;
+    font-family: 'Calibri', sans-serif;
+    font-size: 16px;
+}
+header{
+    background-color: black;
+    color: gray;
+    padding: 10px;
+}
+
+#header{
+    padding-left: 50px;
+    margin: 0 0;
+}
+
+.main-page{
+    text-align: center;
+}
+
+.todo{
+    width: 100%;
+}
+
+#headins-div{
+    width: 100%;
+    text-align: center;
+}
+
+#heading{
+    text-align: center;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+#new-task{
+    width: 40%;
+    height: 32px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin: 0 15px;
+}
+
+#add-task{
+    height: 32px;
+    width: 5%;
+    border: none;
+    border-radius: 5px;
+    background-color: dodgerblue;
+    color: white;
+}
+
+#add-task:hover{
+    cursor: pointer;
+}
+
+#tasks{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    line-height: 10px;
+    align-items: center;
+    list-style-type: none;
+    position: relative;
+    padding-left: 0;
+
+}
+
+.task{
+    width: 60%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 20px 10px;
+
+}
+
+.task input[type='checkbox']{
+    position: static;
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    cursor: pointer;
+}
+
+.task span{
+    display: inline-block;
+    position: relative;
+    width: 85%;
+    line-height: normal;
+    text-align: left;
+}
+
+#checked{
+    text-decoration: line-through;
+}
+
+#delete{
+    width: 20px;
+    height: 20px;
+    float: right;
+    background-image: url("trash.png");
+    border: 0;
+
+}
+
+#delete:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px gray;
+}
+#delete:active{
+    box-shadow: inset 1px 1px 1px 1px gray;
+}
