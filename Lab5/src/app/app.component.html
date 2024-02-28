@@ -1,4 +1,15 @@
-<app-top-bar></app-top-bar>
-<div class="container">
-  <router-outlet></router-outlet>
+<div class="top-bar">
+  <a [routerLink]="['/']">
+    <h1>My Store</h1>
+  </a>
+
+  <button class="fancy-button">Checkout</button>
+</div>
+
+<div class="categories">
+  <button [routerLink]="['/product-list']">All</button>
+  <button type="button">Phones</button>
+  <button>Laptops</button>
+  <button>PCs</button>
+  <button>Consoles</button>
 </div>

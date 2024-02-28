@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ProductListComponent } from "./product-list/product-list.component";
+import { ProductItemComponent } from "./product-list/product-item/product-item.component";
+import {RouterLink, RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet, ProductListComponent, ProductItemComponent, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Lab5';
+  title = 'My Store';
+  protected readonly ProductListComponent = ProductListComponent;
 }
