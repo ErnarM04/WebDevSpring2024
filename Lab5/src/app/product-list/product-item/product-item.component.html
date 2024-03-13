@@ -1,1 +1,18 @@
-<p>product-item works!</p>
+<body>
+<div *ngFor="let product of this.products">
+  <div class="catalogue" *ngIf="product?.category === this.category && !contains(product.name)">
+    <button class="erase-button" (click)="erase(product.name)">
+      <img class="erase" src="https://www.svgrepo.com/show/438140/action-cancel-circle-close-delete-exit-remove-button-x-icon.svg" alt="delete">
+    </button>
+    <a [href]="product.link"> {{ product.name }} </a>
+    <img [src]="product.photo">
+    <h4>Price: {{product.price}}</h4>
+    <p>Rating: {{product.rating}}/5</p>
+    <button class="like" (click)="like(product.id)">
+      <img src="https://cdn.iconscout.com/icon/free/png-256/free-like-2190245-1853251.png" alt="like">
+      {{product.likeCount}}
+    </button>
+    <p class="description">{{product.description}}</p>
+  </div>
+</div>
+</body>

@@ -10,6 +10,7 @@ body {
   height: 100vh;
   align-items: center;
   gap: 40px;
+  flex-direction: row-reverse;
 }
 .img1 {
   margin-top: 180px;
@@ -26,6 +27,7 @@ body {
   border-radius: 1px;
   text-align: center;
   outline: none;
+  float: left;
 }
 .all_login {
   justify-content: center;
@@ -135,9 +137,20 @@ h3 i {
   color: rgb(30, 130, 246); 
   font-weight: bold;
 }
+.instaphone{
+  position: relative;
+  float: right;
+}
+.all_login{
+  position: relative;
+  float: left;
+}
 h4 {
   font-weight: normal;
   font-size: 0.9em;
+}
+.instaphone{
+  float: right;
 }
 .app {
   margin-top: 20px;

@@ -5,8 +5,8 @@
   flex-direction: row;
 }
 .top-bar button{
-  display: flex;
-
+  height: fit-content;
+  float: right;
 }
 .top-bar a{
   color: white;
@@ -16,7 +16,7 @@
 .categories{
   margin-top: 20px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 .categories button{
   padding: 5px;

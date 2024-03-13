@@ -4,8 +4,8 @@ import {CommonModule} from "@angular/common";
 import {HomeComponent} from "./home/home.component";
 import {AboutComponent} from "./about/about.component";
 import {AlbumsComponent} from "./albums/albums.component";
-import {AlbumDetailComponent} from "./albums/album-detail/album-detail.component";
-import {AlbumPhotosComponent} from "./albums/album-detail/album-photos/album-photos.component";
+import {AlbumDetailComponent} from "./album-detail/album-detail.component";
+import {AlbumPhotosComponent} from "./album-photos/album-photos.component";
 
 @Component({
   selector: 'app-root',

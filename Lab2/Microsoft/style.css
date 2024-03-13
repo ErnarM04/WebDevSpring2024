@@ -7,8 +7,6 @@
 
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background: #fff;
-    color: #000;
     font-size: 15px;
     line-height: 1.5;
 }
@@ -111,9 +109,8 @@ ul {
 }
 
 .home-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+    display: flex;
+    flex-direction: column;
     margin-bottom: 40px;
 }
 

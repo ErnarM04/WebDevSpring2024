@@ -1,0 +1,37 @@
+body{
+  display: flex;
+  flex-direction: row;
+}
+img{
+  width: 150px;
+  height: auto;
+}
+a{
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+}
+.catalogue{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-right: 30px;
+}
+.description{
+  width: 200px;
+}
+.like{
+  width: 100px;
+}
+.like img{
+  width: 60px;
+}
+.erase-button{
+  width: 60px;
+  height: 60px;
+}
+.erase{
+  width: 50px;
+  height: 50px;
+}

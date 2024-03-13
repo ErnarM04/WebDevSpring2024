@@ -1,4 +1,9 @@
-<app-album-detail [page]=this.page></app-album-detail>
+<div class="albums" *ngFor="let album of filtered">
+  <div *ngIf="album.userId === this.page">
+    <a [routerLink]="['../albums/'+album.id]" (click)="setData(album.id)">{{album.title}}</a>
+    <button (click)="erase(album.id)">X</button>
+  </div>
+</div>
 <div id="page">
   <p>--Page--</p>
   <select>
@@ -14,3 +19,4 @@
     <option (click)="changePage(10)">10</option>
   </select>
 </div>
+<router-outlet></router-outlet>

@@ -2,14 +2,14 @@
   <a [routerLink]="['/']">
     <h1>My Store</h1>
   </a>
-
-  <button class="fancy-button">Checkout</button>
 </div>
 
 <div class="categories">
-  <button [routerLink]="['/product-list']">All</button>
-  <button type="button">Phones</button>
-  <button>Laptops</button>
-  <button>PCs</button>
-  <button>Consoles</button>
+  <div class="buttons">
+  <button type="button" (click)="setCategory('Phones')">Phones</button>
+  <button (click)="setCategory('Laptops')">Laptops</button>
+  <button (click)="setCategory('PCs')">PCs</button>
+  <button (click)="setCategory('Consoles')">Consoles</button>
+  </div>
+  <app-product-list [category]="category"></app-product-list>
 </div>

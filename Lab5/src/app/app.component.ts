@@ -11,6 +11,12 @@ import {RouterLink, RouterOutlet} from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  category: string = 'All'
   title = 'My Store';
   protected readonly ProductListComponent = ProductListComponent;
+  setCategory(category: string){
+    this.category = category;
+  }
 }
+
+

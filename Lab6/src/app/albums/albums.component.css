@@ -1,0 +1,13 @@
+.albums{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 25%;
+  padding-bottom: 10px;
+}
+.albums button{
+  float: right;
+}
+#page{
+  margin-left: 25%;
+}
