@@ -1,1 +1,3 @@
-<p>album-photos works!</p>
+<div class="photos" *ngFor="let image of images">
+  <img [src]="image.thumbnailUrl" (click)="openPic(image.url)">
+</div>

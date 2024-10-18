@@ -24,5 +24,5 @@ class CompanyVacancyListView(generics.ListAPIView):
     serializer_class = VacancySerializer
 
     def get_queryset(self):
-        company_id = self.kwargs['id']
+        company_id = self.kwargs['company']
         return Vacancy.objects.filter(company_id=company_id)

@@ -1,8 +1,23 @@
+<div class="recent-added">
+<div class="create">
+  <h3>Add Album</h3>
+  <input id="new-title" type="text" name="New Album"> <button (click)="addAlbum()">Add</button>
+</div>
+<div class="news">
+  <h4>Currently added</h4>
+  <div class="new-added" *ngFor="let newalbum of news">
+    <a [routerLink]="['../albums/'+newalbum.id]">{{newalbum.title}}</a> <button class="erase" (click)="eraseNew(newalbum.id)">X</button>
+  </div>
+</div>
+</div>
+<div class="json-albums">
+  <h4>Albums</h4>
 <div class="albums" *ngFor="let album of filtered">
   <div *ngIf="album.userId === this.page">
     <a [routerLink]="['../albums/'+album.id]" (click)="setData(album.id)">{{album.title}}</a>
     <button (click)="erase(album.id)">X</button>
   </div>
+</div>
 </div>
 <div id="page">
   <p>--Page--</p>
@@ -19,4 +34,3 @@
     <option (click)="changePage(10)">10</option>
   </select>
 </div>
-<router-outlet></router-outlet>

@@ -1,29 +1,51 @@
-import {Component, Input} from '@angular/core';
-// @ts-ignore
-import albums from "../albums/albums.json";
-import {CommonModule} from "@angular/common";
-import {RouterOutlet} from "@angular/router";
+import {Component, Input, OnInit} from '@angular/core';
+import {CommonModule, NgOptimizedImage} from "@angular/common";
+import {ActivatedRoute, RouterLink, RouterOutlet} from "@angular/router";
+import {AlbumsComponent} from "../albums/albums.component";
+import {Album} from "../albums";
+import {AlbumsService} from "../albums.service";
 
 @Component({
   selector: 'app-album-detail',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, RouterLink, NgOptimizedImage],
   templateUrl: './album-detail.component.html',
   styleUrl: './album-detail.component.css'
 })
-export class AlbumDetailComponent {
-  // @ts-ignore
-  @Input() id: number | undefined;
-  albums = [...albums];
-  title: string | undefined = this.findTitle();
-  page: number | undefined;
-  findTitle(): string{
-    let on: number = 10;
-    // @ts-ignore
-    let page: number = (this.id / on);
-    console.log(page);
-    return page.toString()
-  }
+export class AlbumDetailComponent implements OnInit{
+
+  id!: number;
 
   protected readonly history = history;
+
+  constructor(private albumSer:AlbumsService, private route: ActivatedRoute) {}
+  album!: Album;
+  ngOnInit(){
+    this.route.params.subscribe(params => {
+      this.id = params['id'].parseInt();
+    })
+    if(this.id > 100){
+      console.log(this.id);
+      this.album = AlbumsComponent.added[this.id - 101];
+      console.log(this.album.title);
+    }
+    else {
+      this.albumSer.getAlbum(Number(this.id)).subscribe((album) => {
+        this.album = album;
+      })
+    }
+
+  }
+
+  updateTitle(){
+    const input = (document.getElementById("newtitle") as HTMLInputElement).value;
+    const text = input.toString();
+    if (text !== "" || text !== undefined){
+      this.album.title = text;
+    }
+  }
+
+  updateNewTitle(){
+
+  }
 }

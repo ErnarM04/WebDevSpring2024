@@ -1,7 +1,8 @@
 <button (click)="history.back()">
-  <img src="backbuttonpng.png" alt="Back">
+  <img ngSrc="backbuttonpng.png" alt="Back" height="512" width="512">
 </button>
-<h2>Title: {{this.page}}</h2>
+<h2>Title: {{this.album.title}}</h2>
+<input id="newtitle" type="text" name="New Title"> <button (click)="updateTitle()">Update</button>
 <h3>Album ID: {{this.id}}</h3>
-<button routerLink="../albums/:id/photos">Photos</button>
+<button routerLink="./photos">Photos</button>
 

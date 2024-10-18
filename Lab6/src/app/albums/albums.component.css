@@ -1,8 +1,11 @@
-.albums{
+.json-albums{
   width: 50%;
+  margin: 0 25%;
+}
+.albums{
+  width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 0 25%;
   padding-bottom: 10px;
 }
 .albums button{
@@ -10,4 +13,24 @@
 }
 #page{
   margin-left: 25%;
+}
+
+.recent-added{
+  width: 50%;
+  margin-left: 25%;
+}
+
+.recent-added .news{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+
+.recent-added .news button{
+  float: right;
+}
+
+.recent-added input{
+  width: 25%;
 }
